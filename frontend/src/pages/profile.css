@@ -1,0 +1,282 @@
+/* =========================
+   PROFILE PAGE
+========================= */
+
+.profile-page{
+    padding:35px;
+    display:grid;
+    grid-template-columns:340px 1fr;
+    gap:30px;
+    min-height:100vh;
+    background:#f5f7ff;
+}
+
+/* =========================
+LEFT CARD
+========================= */
+
+.profile-left{
+    background:linear-gradient(135deg,#6C63FF,#8E7CFF);
+    color:white;
+    border-radius:24px;
+    padding:35px;
+    display:flex;
+    flex-direction:column;
+    justify-content:space-between;
+    box-shadow:0 20px 45px rgba(108,99,255,.25);
+}
+
+.profile-left h4{
+    font-size:18px;
+    opacity:.9;
+    margin-bottom:15px;
+}
+
+.profile-left h1{
+    font-size:42px;
+    font-weight:700;
+    margin-bottom:15px;
+}
+
+.profile-role{
+    display:inline-block;
+    background:white;
+    color:#6C63FF;
+    padding:8px 20px;
+    border-radius:30px;
+    font-weight:600;
+    margin-bottom:30px;
+}
+
+.quote{
+    line-height:1.8;
+    opacity:.95;
+    margin-bottom:35px;
+    font-size:16px;
+}
+
+.profile-stats{
+    display:grid;
+    gap:18px;
+}
+
+.profile-stats div{
+    background:rgba(255,255,255,.18);
+    backdrop-filter:blur(8px);
+    border-radius:18px;
+    padding:20px;
+}
+
+.profile-stats h2{
+    font-size:34px;
+    margin-bottom:6px;
+}
+
+.profile-stats p{
+    opacity:.9;
+}
+
+/* =========================
+RIGHT CARD
+========================= */
+
+.profile-right{
+    background:white;
+    border-radius:24px;
+    padding:35px;
+    box-shadow:0 10px 30px rgba(0,0,0,.08);
+}
+
+.profile-right h2{
+    font-size:34px;
+    margin-bottom:30px;
+    color:#222;
+}
+
+.profile-right label{
+    display:block;
+    margin-top:18px;
+    margin-bottom:8px;
+    font-weight:600;
+    color:#444;
+}
+
+.profile-right input{
+    width:100%;
+    padding:16px;
+    border-radius:14px;
+    border:1px solid #ddd;
+    font-size:16px;
+    outline:none;
+    transition:.3s;
+}
+
+.profile-right input:focus{
+    border-color:#6C63FF;
+    box-shadow:0 0 0 3px rgba(108,99,255,.15);
+}
+
+.save-btn{
+    margin-top:35px;
+    width:100%;
+    padding:18px;
+    border:none;
+    border-radius:14px;
+    background:#6C63FF;
+    color:white;
+    font-size:18px;
+    cursor:pointer;
+    transition:.3s;
+}
+
+.save-btn:hover{
+    background:#564dff;
+    transform:translateY(-2px);
+}
+
+/* =========================
+ACCOUNT CARD
+========================= */
+
+.account-card{
+    grid-column:2;
+    background:white;
+    margin-top:-5px;
+    border-radius:24px;
+    padding:35px;
+    box-shadow:0 10px 30px rgba(0,0,0,.08);
+}
+
+.account-card h2{
+    margin-bottom:25px;
+    font-size:30px;
+}
+
+.info-row{
+    display:flex;
+    justify-content:space-between;
+    padding:18px 0;
+    border-bottom:1px solid #eee;
+}
+
+.info-row:last-child{
+    border:none;
+}
+
+/* =========================
+SUMMARY GRID
+========================= */
+
+.summary-grid{
+    grid-column:1/3;
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:25px;
+}
+
+.summary-card{
+    background:white;
+    padding:30px;
+    border-radius:20px;
+    text-align:center;
+    box-shadow:0 10px 25px rgba(0,0,0,.08);
+    transition:.3s;
+}
+
+.summary-card:hover{
+    transform:translateY(-6px);
+}
+
+.summary-card h1{
+    color:#6C63FF;
+    font-size:42px;
+    margin-bottom:10px;
+}
+
+.summary-card p{
+    color:#666;
+    font-size:16px;
+}
+
+/* =========================
+SECURITY
+========================= */
+
+.security-card{
+    grid-column:1/3;
+    background:white;
+    padding:35px;
+    border-radius:24px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    box-shadow:0 10px 30px rgba(0,0,0,.08);
+}
+
+.security-card h2{
+    margin-bottom:10px;
+    font-size:28px;
+}
+
+.security-card p{
+    color:#666;
+}
+
+.change-btn{
+    padding:16px 28px;
+    border:none;
+    background:#6C63FF;
+    color:white;
+    border-radius:12px;
+    font-size:16px;
+    cursor:pointer;
+    transition:.3s;
+}
+
+.change-btn:hover{
+    background:#564dff;
+}
+
+/* =========================
+RESPONSIVE
+========================= */
+
+@media(max-width:1000px){
+
+.profile-page{
+grid-template-columns:1fr;
+}
+
+.account-card,
+.summary-grid,
+.security-card{
+grid-column:1;
+}
+
+.summary-grid{
+grid-template-columns:repeat(2,1fr);
+}
+
+.security-card{
+flex-direction:column;
+gap:20px;
+align-items:flex-start;
+}
+
+}
+
+@media(max-width:700px){
+
+.summary-grid{
+grid-template-columns:1fr;
+}
+
+.profile-left h1{
+font-size:30px;
+}
+
+.profile-right h2{
+font-size:28px;
+}
+
+}
